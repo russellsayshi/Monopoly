@@ -1,0 +1,49 @@
+initialize all property values/deck shuffling?/player monies
+pass play properly (skip eliminated players, go in some order)
+on each player's turn...
+TURN (***DECISION*** regular or houses?)
+-regular
+	-roll
+	-move
+	-pass go?
+		-add 200 to player cash
+	-which tile?
+		-property
+			-unowned? ***DECISION*** buy it, or not?
+				-buy
+					-subtract price total from player cash (eliminated?)
+					-set property's ownership from null to player
+				-don't buy
+          -turn ends
+			-owned
+				-pay owner proper amount (rent/houses vs utility cards dice roll) 
+         -check if eliminated
+		-fine
+			-get price of fine
+			-subtract price total from player cash (eliminated?)
+			-add total to center board
+		-chance
+			-draw chance card
+			-take chance action (eliminated?)
+		-community chest
+			-draw community chest card
+			-take community chest action (do each specifically, or have general ones?)
+        -check if eliminated
+		-free parking
+			-add center total to player cash
+			-set center to 0
+		-go to jail
+			-move piece to jail
+			-set jail status
+			-END TURN
+	-check doubles and total doubles this turn, send to jail/restart turn properly
+-houses ***DECISION***   [are they eligible to put houses on a color group?]
+	-which color group?
+	-how many?
+	-subtract player total
+	-change ownership status?
+-jail
+	-roll doubles? get out and move or turn ends
+
+
+
